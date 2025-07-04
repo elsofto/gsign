@@ -13,25 +13,45 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`signIn(...)`](#signin)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### signIn(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+signIn(options: GSignOptions) => Promise<GSignResult>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                                  |
+| ------------- | ----------------------------------------------------- |
+| **`options`** | <code><a href="#gsignoptions">GSignOptions</a></code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#gsignresult">GSignResult</a>&gt;</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### GSignResult
+
+| Prop          | Type                |
+| ------------- | ------------------- |
+| **`idToken`** | <code>string</code> |
+
+
+#### GSignOptions
+
+| Prop                 | Type                  |
+| -------------------- | --------------------- |
+| **`clientId`**       | <code>string</code>   |
+| **`serverClientId`** | <code>string</code>   |
+| **`scopes`**         | <code>string[]</code> |
 
 </docgen-api>

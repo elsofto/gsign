@@ -1,3 +1,15 @@
+export interface GSignOptions {
+  clientId: string;
+  serverClientId: string;
+  scopes: string[];
+}
+
+
+export interface GSignResult {
+  idToken: string;
+}
+
+
 export interface GSignPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  signIn(options: GSignOptions): Promise<GSignResult>;
 }

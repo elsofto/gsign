@@ -1,5 +1,7 @@
 package com.elsofto.capacitor.plugins.gsign;
 
+import android.util.Log;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -9,14 +11,16 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "GSign")
 public class GSignPlugin extends Plugin {
 
-    private GSign implementation = new GSign();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void signIn(PluginCall call) {
+        String clientId = call.getString("serverClientId");
+
+        Log.i("clientId", clientId);
 
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
+        ret.put("idToken", "value");
+
         call.resolve(ret);
     }
 }
