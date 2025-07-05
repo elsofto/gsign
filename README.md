@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`signIn(...)`](#signin)
+* [`signOut()`](#signout)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -36,14 +37,28 @@ signIn(options: GSignOptions) => Promise<GSignResult>
 --------------------
 
 
+### signOut()
+
+```typescript
+signOut() => Promise<void>
+```
+
+--------------------
+
+
 ### Interfaces
 
 
 #### GSignResult
 
-| Prop          | Type                |
-| ------------- | ------------------- |
-| **`idToken`** | <code>string</code> |
+| Prop                    | Type                |
+| ----------------------- | ------------------- |
+| **`idToken`**           | <code>string</code> |
+| **`email`**             | <code>string</code> |
+| **`displayName`**       | <code>string</code> |
+| **`familyName`**        | <code>string</code> |
+| **`givenName`**         | <code>string</code> |
+| **`profilePictureUri`** | <code>string</code> |
 
 
 #### GSignOptions

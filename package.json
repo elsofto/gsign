@@ -1,5 +1,5 @@
 {
-  "name": "gsign",
+  "name": "capacitor-social-auth",
   "version": "0.0.1",
   "description": "Capacitor Google SignIn Plugin",
   "main": "dist/plugin.cjs.js",
